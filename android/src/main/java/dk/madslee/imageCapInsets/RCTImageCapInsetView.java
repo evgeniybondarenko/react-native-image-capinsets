@@ -21,12 +21,16 @@ public class RCTImageCapInsetView extends ImageView {
 
     public void setCapInsets(Rect insets) {
         mCapInsets = insets;
-        reload();
+        if(mUri!= null) {
+            reload();
+        }
     }
 
     public void setSource(String uri) {
         mUri = uri;
-        reload();
+        if(mUri!= null) {
+            reload();
+        }
     }
 
     public void reload() {
